@@ -1,0 +1,20 @@
+{
+  "name": "starter--near-sdk-as",
+  "version": "0.0.1",
+  "description": "Start with a basic project",
+  "scripts": {
+    "deploy": "near dev-deploy build/release/simple.wasm",
+    "dev": "yarn build:release && yarn deploy",
+    "test": "yarn asp -f unit.spec",
+    "clean": "rm -rf ./build && rm -rf ./neardev",
+    "build": "asb --target debug",
+    "build:release": "asb",
+    "asp": "asp --verbose --nologo"
+  },
+  "keywords": [],
+  "author": "hello@near.org",
+  "license": "ISC",
+  "devDependencies": {
+    "near-sdk-as": "^3.1.0"
+  }
+}
